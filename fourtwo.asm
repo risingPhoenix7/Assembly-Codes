@@ -1,10 +1,10 @@
-#replace a substring if exists with a star
+;replace a substring if exists with a star
 .model tiny
 .data
 string1 db 'BITSIOTLAB'
-string2 db 'IOT'
+string2 db 'IOTA'
 string1length db 10
-string2length db 3
+string2length db 4
 
 .code
 .startup

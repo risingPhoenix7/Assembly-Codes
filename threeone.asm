@@ -1,4 +1,4 @@
-#replace instances of 0ah in a string with 65h
+;replace instances of 0ah in a string with 65h
 
 .model tiny
 .data

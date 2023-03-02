@@ -1,4 +1,4 @@
-#count number of negative numbers
+;count number of negative numbers
 .model tiny
 .data
 

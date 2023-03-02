@@ -1,4 +1,4 @@
-#palindrome checker
+;palindrome checker
 
 .model tiny
 .data
