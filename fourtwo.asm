@@ -1,10 +1,10 @@
-;replace a substring if exists with a star
+;replace all instances of a substring if exists with a star
 .model tiny
 .data
-string1 db 'BITSIOTLAB'
-string2 db 'IOTA'
-string1length db 10
-string2length db 4
+string1 db 'BITSIOTLABIOTABCD'
+string2 db 'IOT'
+string1length db 17
+string2length db 3
 
 .code
 .startup
@@ -45,12 +45,22 @@ point3: mov bl,cl
         mov [di],al
         inc di
         inc si
+        mov cl,bl
 point4: mov bh,[si]
         mov [di],bh
         inc si
         inc di
-        dec bl
+        dec cl
         jnz point4
+        mov bh,00h
+        sub di,bx
+        mov si,di
+        lea di,string2
+        mov cl,bl
+        inc cl
+        mov ch,string2length
+        jmp point1
+
 
 point5:
 .exit
